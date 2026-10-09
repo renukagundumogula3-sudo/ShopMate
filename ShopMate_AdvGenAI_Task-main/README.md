@@ -1,102 +1,161 @@
-# ShopMATE
+# 🛍️ ShopMATE — AI-Powered E-Commerce Platform
 
-ShopMATE is a modern E-commerce application skeleton built with the MERN stack (MongoDB, Express.js, React, Node.js). It provides a solid foundation for rebuilding a scalable online store with a focus on clean architecture and future AI integration.
+ShopMATE is a full-stack e-commerce web application built using the MERN stack. It combines online shopping functionality with AI-powered features to improve product discovery, customer interaction, and content creation.
 
-## Features
+The project provides a user-friendly shopping experience alongside administrative tools for managing products and AI-generated blog content.
 
-- **Modular Architecture**: Separate client and server structures for better maintainability.
-- **Modern Frontend**: Built with React (Vite) and Tailwind CSS for a responsive and sleek UI.
-- **Robust Backend**: Node.js and Express.js REST API with native MongoDB driver for flexibility.
-- **State Management**: React Context API for managing global application state.
-- **AI-Ready**: Structured to easily integrate AI features like recommendations or chatbots.
+## ✨ Key Features
 
-## Tech Stack
+- **User Authentication** — Registration, login, protected routes, and account-related functionality.
+- **Product Browsing** — Explore products and view individual product details.
+- **Shopping Cart** — Add products to the cart and manage shopping selections.
+- **AI-Powered Chatbot** — Interact with the shopping assistant for a more engaging experience.
+- **Semantic Product Search** — Explore products using meaning-based search capabilities.
+- **AI Blog Generator** — Generate blog drafts from user-provided topics.
+- **Blog Review and Publishing** — Review generated drafts before publishing them.
+- **Admin Dashboard** — Access administrative functionality for managing the shopping experience.
+- **Refund Policy Processing** — Includes a refund policy document and related policy-processing functionality.
 
-### Client
-- **Framework**: React (Vite)
-- **Styling**: Tailwind CSS
-- **Routing**: React Router DOM (v6)
-- **Icons**: Lucide React
-- **HTTP Client**: Axios
+## 🧰 Tech Stack
 
-### Server
-- **Runtime**: Node.js
-- **Framework**: Express.js
-- **Database**: MongoDB (Native Driver)
-- **Utilities**: Dotenv, CORS, Nodemon
+| Technology | Purpose |
+|---|---|
+| React.js | Frontend user interface |
+| Node.js | Backend runtime |
+| Express.js | REST API development |
+| MongoDB | Database |
+| JavaScript | Application logic |
+| Vite | Frontend development and build tooling |
+| Tailwind CSS | UI styling |
+| AI and semantic search services | Intelligent shopping and blog features |
 
-## Prerequisites
+## 📁 Project Structure
 
-- [Node.js](https://nodejs.org/) (v16 or higher)
-- [MongoDB](https://www.mongodb.com/) (Local instance or Atlas URI)
-
-## Setup Instructions
-
-### 1. Server Setup
-
-Navigate to the `server` directory and install dependencies:
-
-```bash
-cd server
-npm install
-```
-
-**Environment Configuration:**
-
-Create a `.env` file in the `server` directory with the following variables:
-
-```env
-PORT=3001
-MONGO_URI=<MONGODB ATLAS CONNECTION URL>
-```
-
-**Database Seeding (Optional):**
-
-To populate the database with initial mock data:
-
-```bash
-npm run seed
-```
-
-**Start the Server:**
-
-```bash
-npm run dev
-```
-
-The server will run on `http://localhost:3001`.
-
-### 2. Client Setup
-
-Open a new terminal, navigate to the `client` directory, and install dependencies:
-
-```bash
-cd ../client
-npm install
-```
-
-**Start the Client:**
-
-```bash
-npm run dev
-```
-
-The application will be available at `http://localhost:5173`.
-
-## Project Structure
-
-```
+```text
 ShopMATE/
-├── client/          # frontend application (Vite + React)
-│   ├── src/         # source code
-│   └── public/      # static assets
-└── server/          # backend application (Node + Express)
-    ├── controllers/ # route controllers
-    ├── routes/      # api routes
-    └── db/          # database connection
+├── client/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   ├── utils/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── index.html
+│   └── package.json
+├── server/
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── routes/
+│   ├── services/
+│   ├── tests/
+│   ├── server.js
+│   └── package.json
+├── .gitignore
+└── README.md
 ```
 
-## License
+## ⚙️ Getting Started
 
-This project is licensed under the ISC License.
+### Prerequisites
 
+Install the following before running the project:
+
+- Node.js and npm
+- MongoDB or a MongoDB Atlas connection
+- Git
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/renukagundumogula3-sudo/ShopMate.git
+cd ShopMate
+```
+
+### 2. Install frontend dependencies
+
+```bash
+cd ShopMate_AdvGenAI_Task-main/client
+npm install
+```
+
+### 3. Install backend dependencies
+
+Open another terminal:
+
+```bash
+cd ShopMate_AdvGenAI_Task-main/server
+npm install
+```
+
+### 4. Configure environment variables
+
+Create the required `.env` file in the backend directory and configure the environment variables used by your application.
+
+Depending on your implementation, these may include:
+
+- MongoDB connection URI
+- Server port
+- JWT secret
+- AI service API key
+- Semantic search or vector database credentials
+- Email service credentials, if enabled
+
+Use the variable names expected by your source code. Never commit actual secrets or API keys to GitHub.
+
+### 5. Start the backend
+
+From the `server` directory, run the command supported by your `package.json`, for example:
+
+```bash
+npm start
+```
+
+If your project uses a development script, you can use:
+
+```bash
+npm run dev
+```
+
+### 6. Start the frontend
+
+From the `client` directory, run:
+
+```bash
+npm run dev
+```
+
+Open the local URL printed by Vite in your terminal.
+
+> Note: The exact commands and configuration depend on the scripts and environment variables defined in your project.
+
+## 🔐 Security
+
+- Keep `.env` files and credentials out of version control.
+- Use strong secrets for authentication.
+- Validate user input on the backend.
+- Protect administrative routes with appropriate authorization.
+- Never expose private API keys in frontend code.
+
+## 🎯 Project Objective
+
+The goal of ShopMATE is to demonstrate how a modern MERN-based e-commerce platform can be enhanced with AI-assisted shopping, semantic product discovery, and automated content generation.
+
+## 🚀 Future Enhancements
+
+- Online payment gateway integration
+- Product recommendations based on shopping behavior
+- Improved product filtering and sorting
+- Analytics dashboard for administrators
+- Automated testing and deployment pipelines
+
+## 👩‍💻 Repository
+
+**GitHub:** https://github.com/renukagundumogula3-sudo/ShopMate
+
+---
+
+⭐ If you find this project interesting, consider giving the repository a star.
+
+*Built as a full-stack development project exploring e-commerce and AI integration.*
